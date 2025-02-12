@@ -1,0 +1,19 @@
+﻿@model List<Customer>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Balance</th>
+    </tr>
+
+    @foreach(var obj in @Model){
+      @* @Html.Partial("_loop",@obj); *@
+
+      <partial name="_loop" model="@obj" />
+
+
+
+    }
+   
+</table>

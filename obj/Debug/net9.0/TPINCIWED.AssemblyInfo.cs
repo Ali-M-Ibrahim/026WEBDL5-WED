@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TPINCIWED")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f7bd205572e03b5333457ca225ae20837c5ef0c")]
 [assembly: System.Reflection.AssemblyProductAttribute("TPINCIWED")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TPINCIWED")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

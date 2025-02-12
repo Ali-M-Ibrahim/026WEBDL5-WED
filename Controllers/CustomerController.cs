@@ -48,6 +48,31 @@ namespace TPINCIWED.Controllers
 
             return View(list);
 
-        }    
+        }
+
+
+        public IActionResult List2()
+        {
+            var list = new List<Customer>();
+
+
+            Customer customer = new Customer();
+            customer.Id = 1;
+            customer.Name = "Ali Ibrahim";
+            customer.Balance = 10.0;
+
+
+            Customer customer2 = new Customer();
+            customer2.Id = 2;
+            customer2.Name = "Joe Doe";
+            customer2.Balance = 10.0;
+
+            list.Add(customer);
+            list.Add(customer2);
+
+            return View(list);
+
+        }
+
     }
 }
