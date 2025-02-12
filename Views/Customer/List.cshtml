@@ -1,0 +1,18 @@
+﻿@model List<Customer>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Balance</th>
+    </tr>
+
+    @foreach(var obj in @Model){
+        <tr>
+            <td>@obj.Id</td>
+            <td>@obj.Name</td>
+            <td>@obj.Balance</td>
+        </tr>
+    }
+   
+</table>

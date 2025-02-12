@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .logo-img {
+            height: 44px;
+        }
+
+        .menu-link {
+            font-size: 16px;
+        }
+        body {
+            font-family: sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container-fluid {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1057px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* header start */
+        .bg-black-transparent {
+            position: relative;
+            z-index: 0;
+        }
+
+            .bg-black-transparent:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                background-color: #000000;
+                background: linear-gradient(45deg, black, transparent);
+            }
+
+        .header {
+            border-bottom: 8px solid #b1953a;
+        }
+
+        .navbar-wrapper {
+            padding: 13px 38px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-toggle-btn {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu-list,
+        .footer-logo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-link {
+            color: #ffffff;
+            padding: 14px 13px;
+            font-size: 20px;
+            font-family: "Rubik", sans-serif;
+            font-weight: 400;
+            letter-spacing: 0px;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .navbar-menus {
+            background-color: #000000b3;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            opacity: 0;
+            visibility: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transition: 0.25s ease;
+        }
+
+            .navbar-menus .menu-list {
+                padding: 40px 0;
+                background-color: #ffffff;
+                width: 270px;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                transition: 0.25s ease;
+                transform: translateX(-100%);
+            }
+
+                .navbar-menus .menu-list .menu-item {
+                    width: 100%;
+                }
+
+            .navbar-menus .menu-link {
+                color: #000000;
+                padding: 15px 20px;
+                display: block;
+                text-align: left;
+                transition: 0.3s ease;
+            }
+
+                .navbar-menus .menu-link:hover {
+                    background-color: #deedee;
+                }
+
+        .nav-toggle-btn {
+            display: block;
+        }
+
+        /* body.sidebar-open */
+        .sidebar-open {
+            overflow: hidden;
+        }
+
+            .sidebar-open .navbar-menus {
+                opacity: 1;
+                visibility: visible;
+            }
+
+                .sidebar-open .navbar-menus .menu-list {
+                    transform: translateX(0);
+                }
+
+        }
+
+    
+        
+    </style>
+
+    <style>
+        .footer {
+            position: absolute;
+            bottom: 0
+        }
+    </style>
+    <title>.net page</title>
+      <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+</style>
+
+    @RenderSection("head",required:false)
+</head>
+<body>
+        
+
+
+    <header class="header bg-black-transparent">
+        <div class="container-fluid">
+            <div class="navbar-wrapper">
+                <div class="brand-logo">
+                    <a href="#">
+                        <img src="images/logo.png" alt="brand-logo" class="logo-img" />
+                    </a>
+                </div>
+                <a class="nav-toggle-btn">
+                    <svg viewBox="0 0 100 80" width="30" height="30">
+                        <rect width="100" height="10"></rect>
+                        <rect y="30" width="100" height="10"></rect>
+                        <rect y="60" width="100" height="10"></rect>
+                    </svg>
+                </a>
+                <nav class="navbar-menus">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Home</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">About Us</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Products</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">services</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Blog</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Testimonials</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+
+    <footer class="border-top footer text-muted">
+        copyright 2025 usj test
+    </footer>
+
+        @RenderBody()
+
+    @RenderSection("aboveHeader", required: false)
+
+        @RenderSection("scripts",required:false)
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+          $(".nav-toggle-btn").click(function () {
+            //debugger
+            $("body").toggleClass("sidebar-open");
+          });
+
+          $(".navbar-menus").mouseup(function (e) {
+            var navbar = $(".navbar-menus .menu-list");
+
+            if (!navbar.is(e.target) && navbar.has(e.target).length === 0) {
+              $("body").removeClass("sidebar-open");
+            }
+          });
+        });
+
+    </script>
+</body>
+</html>
+

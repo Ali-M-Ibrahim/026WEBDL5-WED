@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TPINCIWED.props" />
+</Project>
