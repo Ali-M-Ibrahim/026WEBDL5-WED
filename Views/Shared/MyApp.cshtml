@@ -193,8 +193,9 @@
     @RenderSection("head",required:false)
 </head>
 <body>
-        
 
+
+    @RenderSection("aboveHeader", required: false)
 
     <header class="header bg-black-transparent">
         <div class="container-fluid">
@@ -248,7 +249,6 @@
 
         @RenderBody()
 
-    @RenderSection("aboveHeader", required: false)
 
         @RenderSection("scripts",required:false)
 
