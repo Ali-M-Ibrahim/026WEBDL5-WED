@@ -1,0 +1,24 @@
+﻿@model List<Teacher>
+
+	<h1>List of Teachers</h1>
+
+	<a asp-controller="Teacher" asp-action="Create" class="mb-2 btn btn-success" >+ Create </a>
+
+	<table class="table table-striped table-hover">
+
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Degree</th>
+		</tr>
+
+		@foreach(var obj in Model){
+			<tr>
+				<td>@obj.Id</td>
+			<td>@obj.Name</td>
+			<td>@obj.Degree</td>
+			</tr>
+		}
+
+
+	</table>
